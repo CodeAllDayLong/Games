@@ -5,6 +5,8 @@
 #---     a 4x4 table in which every grid has a letter
 
 def GenerateGame():
-
+    # 
+    alphabet = {a,b,c,d}
+    # need alphabet and dictionary
     return
 
