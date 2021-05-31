@@ -1,10 +1,8 @@
 # this is a solution script for FreeFlow
 
 
-print('HelloWorld')
+#-------- First, we need to create a flow puzzle
 
-#this is for branch 'version_0528'
-
-#now that bran v0528 has been merged into master and then deleted.
-
-#this is again for a new branch 'v052802'
+# For every flow puzzle, it has attributes as follows:
+# a table with size N*M
+# K dots with coordinates like C_k = (X_k , Y_k) in which X <= M and Y <= N
