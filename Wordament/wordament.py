@@ -9,6 +9,39 @@ endict = enchant.Dict("en_UK")
 import random
 import string
 
+#class letter:
+    # a letter is a letter, 
+    # but also has attributes like:
+    # position: the axes of letter in the 4x4 grid
+    # flipflag: indicate whether this letter is evolved ? to be discussed this issue
+    
+class Wordament:
+    def __init__(self):
+        self.flag = True
+        self.letters = []
+        self.index_list = [] 
+        
+    def shuffle(self):
+        for i in range(16):
+            #one_letter = random.sample(string.ascii_uppercase, 1)
+            k = random.randint(0,25)
+            one_letter = string.ascii_uppercase[k]
+            self.letters.append((one_letter))    
+            
+    def refresh(self):
+        self.flag = True
+        self.index_list=[]
+        
+    def search_from(self, an_index):
+        #self.index_list[]
+        
+    def next_index(an_index):
+        new_i = 100
+        new_up = an_index - 4
+        
+
+###############
+
 def GenerateGame(letters=False, play=False):
     all_letters = []
     if letters == False:
@@ -53,3 +86,5 @@ def Find_16(all_letters, show=True):
         for answer in answers:
             print(answer)
     return answers
+
+def find_next(existed_letters, )
