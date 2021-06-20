@@ -15,18 +15,49 @@ import string
     # position: the axes of letter in the 4x4 grid
     # flipflag: indicate whether this letter is evolved ? to be discussed this issue
     
-class Wordament:
-    def __init__(self):
-        self.flag = True
-        self.letters = []
-        self.index_list = [] 
+class Wordament(object):
+    def __init__(self, flag="", 
+                 letters=["L","N","A","R",
+                          "E","S","P","B",
+                          "T","R","A","NT",
+                          "R","E","I","J"],
+                 scores=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]):
+        self.flag = flag
         
-    def shuffle(self):
-        for i in range(16):
-            #one_letter = random.sample(string.ascii_uppercase, 1)
-            k = random.randint(0,25)
-            one_letter = string.ascii_uppercase[k]
-            self.letters.append((one_letter))    
+        self.letters = letters
+        self.index_list = []
+        
+        
+        ###
+        self.highscores = []
+        self.highscore(30)
+    
+    
+    def answer(self):
+        return
+    
+    
+    def highscore(N=10):
+        if len(self.highscores) < N:
+            self.answer()
+        print(self.highscores[:N])    
+        return
+    
+    
+    def show_list(self):
+        #self.highscores
+        highscores = ""
+        print(highscores)
+        return
+    
+    
+        
+    # def shuffle(self):
+    #     for i in range(16):
+    #         #one_letter = random.sample(string.ascii_uppercase, 1)
+    #         k = random.randint(0,25)
+    #         one_letter = string.ascii_uppercase[k]
+    #         self.letters.append((one_letter))    
             
     def refresh(self):
         self.flag = True
