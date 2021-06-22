@@ -34,6 +34,8 @@ class Wordament(object):
     
     
     def answer(self):
+        
+        self.answer = answer_words
         return
     
     
@@ -65,10 +67,12 @@ class Wordament(object):
         
     def search_from(self, an_index):
         #self.index_list[]
+        return
         
     def next_index(an_index):
         new_i = 100
         new_up = an_index - 4
+        return
         
 
 ###############
