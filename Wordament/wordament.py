@@ -16,34 +16,44 @@ import string
     # flipflag: indicate whether this letter is evolved ? to be discussed this issue
     
 class Wordament(object):
-    def __init__(self, flag="", 
+    def __init__(self, flag=False, bonus=False,
                  letters=["L","N","A","R",
                           "E","S","P","B",
                           "T","R","A","NT",
                           "R","E","I","J"],
                  scores=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]):
-        self.flag = flag
         
+        self.flag = flag
+        self.bonus = bonus
         self.letters = letters
-        self.index_list = []
+        self.scores = scores
+        
+        ###
+
+        
         
         
         ###
         self.highscores = []
         self.highscore(30)
-    
-    
-    def answer(self):
+
+
+    def find_paths(self, start_point=0):
         
-        self.answer = answer_words
         return
     
     
-    def highscore(N=10):
-        if len(self.highscores) < N:
-            self.answer()
-        print(self.highscores[:N])    
-        return
+    # def answer(self):
+        
+    #     self.answer = answer_words
+    #     return
+    
+    
+    # def highscore(N=10):
+    #     if len(self.highscores) < N:
+    #         self.answer()
+    #     print(self.highscores[:N])    
+    #     return
     
     
     def show_list(self):
@@ -74,8 +84,26 @@ class Wordament(object):
         new_up = an_index - 4
         return
         
+###################
 
-###############
+
+def neighbour(grid_index):
+    return
+
+def generate_letters(s="L N A R E S P B T R A NT R E I J"):
+    letters = s.split(" ")
+    if len(letters) == 16:
+        string = " ".join(letters)
+        print("Grid letters have been successfully generated. Letters = [{0}]".format(string))
+        return letters
+    else:
+        print("WARNING: Letter generation failed! There should be 16 letters in total!")
+        return
+    
+    
+generate_letters(s="a b c d e f g h i j k l m n o p")
+    
+############################################################################## abandon
 
 def GenerateGame(letters=False, play=False):
     all_letters = []
@@ -111,8 +139,8 @@ def GenerateGame(letters=False, play=False):
         print("\n")
     return all_letters
 
-a = GenerateGame(letters="LSDIOABCUEMWQLXY",play=True)
-B = GenerateGame(play=True)
+# a = GenerateGame(letters="LSDIOABCUEMWQLXY",play=True)
+# B = GenerateGame(play=True)
 
 def Find_16(all_letters, show=True):
     answers = []
@@ -122,4 +150,3 @@ def Find_16(all_letters, show=True):
             print(answer)
     return answers
 
-def find_next(existed_letters, )
