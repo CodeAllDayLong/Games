@@ -8,12 +8,6 @@ import enchant
 endict = enchant.Dict("en_UK")
 import random
 import string
-
-#class letter:
-    # a letter is a letter, 
-    # but also has attributes like:
-    # position: the axes of letter in the 4x4 grid
-    # flipflag: indicate whether this letter is evolved ? to be discussed this issue
     
 class Wordament(object):
     def __init__(self, flag=False, bonus=False,
@@ -40,6 +34,8 @@ class Wordament(object):
 
     def find_paths(self, start_point=0):
         
+        
+        
         return
     
     
@@ -62,7 +58,10 @@ class Wordament(object):
         print(highscores)
         return
     
-    
+    def calculate_score(scores_list):
+        length = len(scores_list)
+        the_score = 0
+        return the_score
         
     # def shuffle(self):
     #     for i in range(16):
